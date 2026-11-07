@@ -64,6 +64,7 @@ export function Dialog({
           className={cn(
             'fixed top-1/2 left-1/2 z-50 w-[calc(100vw-48px)] -translate-x-1/2 -translate-y-1/2',
             'overflow-hidden rounded-2xl border border-line-strong bg-panel shadow-[0_40px_120px_-30px_rgba(0,0,0,1)]',
+            'focus:outline-none',
             'data-[state=open]:animate-rise',
             width,
           )}

@@ -691,7 +691,9 @@ function AdvancedDialog({ open, onOpenChange }: { open: boolean; onOpenChange: (
           <div key={field.id}>
             <div className="mb-1 flex items-baseline justify-between">
               <label className="text-[11.5px] font-medium text-fg-soft">{field.label}</label>
-              <code className="font-mono text-[10px] text-fg-dim">--{field.id}</code>
+              {field.id.startsWith('__') ? null : (
+                <code className="font-mono text-[10px] text-fg-dim">--{field.id}</code>
+              )}
             </div>
             <input
               value={(values[field.id] as string) ?? ''}

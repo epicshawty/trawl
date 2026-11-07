@@ -138,13 +138,10 @@ export interface Settings {
   outputDir: string;
   template: string;
   maxConcurrent: number;
-  theme: 'dark' | 'light';
-  autoUpdateCheck: boolean;
   speedLimitEnabled: boolean;
   speedLimitKbps: number;
   notifyOnComplete: boolean;
   openFolderOnComplete: boolean;
-  hardwareAcceleration: boolean;
 }
 
 export interface Preset {

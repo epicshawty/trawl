@@ -11,13 +11,10 @@ export const DEFAULT_SETTINGS: Settings = {
   outputDir: '',
   template: DEFAULT_TEMPLATE,
   maxConcurrent: 3,
-  theme: 'dark',
-  autoUpdateCheck: true,
   speedLimitEnabled: false,
   speedLimitKbps: 0,
   notifyOnComplete: true,
   openFolderOnComplete: false,
-  hardwareAcceleration: true,
 };
 
 function readJson<T>(file: string, fallback: T): T {

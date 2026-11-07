@@ -301,6 +301,9 @@ if (!gotLock) {
     );
     queue.load();
     registerIpc();
+    // Restored jobs marked "queued" should continue on their own; interrupted
+    // ones come back as "paused" and wait for the user.
+    setTimeout(() => queue?.kick(), 1500);
     createWindow();
 
     app.on('activate', () => {

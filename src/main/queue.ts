@@ -174,7 +174,11 @@ export class QueueManager {
       runtime.intent = 'pause';
       runtime.kill();
     }
-    this.persist();
+    try {
+      store().saveQueue(this.list());
+    } catch {
+      /* best effort */
+    }
   }
 
   /** Kick the scheduler (used after load to resume restored work). */

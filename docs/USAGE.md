@@ -34,6 +34,10 @@ Open the **Log** tab. It contains the exact argv Trawl executed plus yt-dlp's ou
 
 Useful flags for stubborn sites: `--cookies-from-browser chrome`, `--proxy`, `--extractor-args`, and `--impersonate chrome`.
 
+## How Trawl calls yt-dlp
+
+Every run starts with `--ignore-config`, so your `yt-dlp.conf` never changes what the GUI does. Put anything you need in **Options → Extra arguments** instead — it is appended verbatim and shown in the command preview.
+
 ## Settings
 
 | Setting | Meaning |

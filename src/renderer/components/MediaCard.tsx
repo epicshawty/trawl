@@ -49,7 +49,7 @@ export function MediaCard({
           {result.thumbnail ? (
             <img src={result.thumbnail} alt="" className="h-full w-full object-cover" />
           ) : (
-            <ThumbFallback label={result.extractor_key ?? 'media'} />
+            <ThumbFallback label={result.entries?.length ? 'playlist' : (result.extractor_key ?? 'media')} />
           )}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
           {result.duration ? (
@@ -89,9 +89,11 @@ export function MediaCard({
           </div>
 
           <div className="mt-auto flex items-center gap-2 pt-2.5">
-            <Badge>
-              {formats.length} {formats.length === 1 ? 'format' : 'formats'}
-            </Badge>
+            {formats.length ? (
+              <Badge>
+                {formats.length} {formats.length === 1 ? 'format' : 'formats'}
+              </Badge>
+            ) : null}
             {result.chapters?.length ? <Badge tone="info">{result.chapters.length} chapters</Badge> : null}
             {result.age_limit ? <Badge tone="warn">{result.age_limit}+</Badge> : null}
             <span className="flex-1" />
@@ -126,7 +128,7 @@ export function MediaCard({
             <ChevronDown className={cn('size-3.5 text-fg-dim transition-transform', showEntries && 'rotate-180')} />
           </button>
           {showEntries ? (
-            <div className="max-h-56 overflow-y-auto border-t border-line/60 px-2 py-1.5">
+            <div className="max-h-56 overflow-y-auto border-t border-line/60 px-2 py-1.5 [mask-image:linear-gradient(to_bottom,black_88%,transparent)]">
               {result.entries?.map((entry, index) => (
                 <div
                   key={`${entry.id}-${index}`}

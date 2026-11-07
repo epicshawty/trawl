@@ -98,6 +98,7 @@ export function SettingsDialog() {
                       setFetching(true);
                       const result = await window.trawl.binary.fetch();
                       setFetching(false);
+                      await refreshBinary();
                       toast({
                         title: result.ok ? 'yt-dlp installed' : 'Install failed',
                         description: result.message.slice(0, 160),
