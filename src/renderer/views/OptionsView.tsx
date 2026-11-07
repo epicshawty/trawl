@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
 import { Search, X, SlidersHorizontal, Info, RotateCcw } from 'lucide-react';
-import { FIELDS_BY_GROUP, type RegistryField } from '@shared/options';
+import { FIELDS_BY_GROUP, OPTION_COUNT, type RegistryField } from '@shared/options';
 import { useApp } from '@/store';
 import { cn } from '@/lib/utils';
 import { Input, Select, Switch, Textarea } from '@/components/ui/Controls';
@@ -149,7 +149,7 @@ export function OptionsView() {
             <div>
               <h1 className="text-[21px] font-semibold tracking-[-0.025em] text-fg">Options</h1>
               <p className="mt-0.5 text-[12.5px] text-fg-dim">
-                Every flag yt-dlp exposes, grouped the way yt-dlp groups them.
+                Every flag that makes sense outside a terminal, grouped the way yt-dlp groups them.
               </p>
             </div>
             <div className="flex items-center gap-2">
@@ -171,7 +171,7 @@ export function OptionsView() {
               <Input
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Search 245 options — try “subtitle”, “cookies”, “retry”…"
+                placeholder={`Search ${OPTION_COUNT} options — try “subtitle”, “cookies”, “retry”…`}
                 className="pl-8"
               />
             </div>

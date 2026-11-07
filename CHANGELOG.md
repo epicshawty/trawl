@@ -3,6 +3,13 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) · Versioning: [SemVer](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-11-07
+
+### Fixed
+
+- Option counts in the UI were taken from `--help` rather than from the flags the browser actually exposes.
+- Playlists no longer show a meaningless "0 formats" badge.
+
 ## [0.1.0] - 2026-11-07
 
 First release.
@@ -21,4 +28,5 @@ First release.
 - Frameless window with custom title bar, keyboard shortcuts, light/dark-native scrollbars and a dark UI built on Radix + Tailwind 4.
 - GitHub Actions: per-platform builds on tag push, artifacts attached to a GitHub Release.
 
+[0.1.1]: https://github.com/epicshawty/trawl/releases/tag/v0.1.1
 [0.1.0]: https://github.com/epicshawty/trawl/releases/tag/v0.1.0

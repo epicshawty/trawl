@@ -212,7 +212,7 @@ export function DownloadView() {
               {[
                 { icon: <Sparkles className="size-4" />, title: '1000+ sites', text: 'YouTube, Vimeo, Twitch, SoundCloud, X and everything else yt-dlp supports.' },
                 { icon: <Wand2 className="size-4" />, title: 'Sane defaults', text: 'Best video plus best audio, muxed to MP4. Change it once and it sticks.' },
-                { icon: <Layers className="size-4" />, title: 'Every flag', text: 'All 245 CLI options are in the Options tab — nothing is hidden from you.' },
+                { icon: <Layers className="size-4" />, title: 'Every flag', text: 'The full option surface lives in the Options tab, searchable and grouped.' },
               ].map((card) => (
                 <div key={card.title} className="panel px-3.5 py-3">
                   <div className="mb-1.5 text-accent-soft">{card.icon}</div>

@@ -41,6 +41,8 @@ export const OPTION_GROUPS: OptionGroupSpec[] = rawGroups
   .filter((group) => group.options.length > 0);
 
 export const OPTIONS: OptionSpec[] = OPTION_GROUPS.flatMap((g) => g.options);
+/** Flags the Options tab exposes directly. */
+export const OPTION_COUNT = OPTIONS.length;
 export const OPTION_BY_ID = new Map(OPTIONS.map((o) => [o.id, o]));
 
 export type FieldKind = 'switch' | 'text' | 'number' | 'select' | 'path' | 'template' | 'multiline';

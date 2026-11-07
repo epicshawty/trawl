@@ -19,7 +19,7 @@
 
 ## What it is
 
-Trawl wraps every flag in yt-dlp 2026.10.26 — all 245 of them — in an interface that doesn't require reading `--help`.
+Trawl puts yt-dlp behind an interface that doesn't require reading `--help`. The registry is generated from yt-dlp 2026.10.26's 245 flags — every one that means something outside a terminal is in there.
 
 - **Analyze any link** — thumbnails, chapters, subtitle tracks, and all 52 formats for a video, in one request.
 - **Format composer** — resolution ceiling, container, codec, fps, or a raw format expression. Audio mode extracts and converts with ffmpeg.
