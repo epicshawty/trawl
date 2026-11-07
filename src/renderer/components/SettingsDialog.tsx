@@ -50,9 +50,12 @@ export function SettingsDialog() {
   const toast = useApp((s) => s.toast);
   const [updating, setUpdating] = useState(false);
   const [fetching, setFetching] = useState(false);
+  const [paths, setPaths] = useState<{ portable: boolean; userData: string; version: string } | null>(null);
 
   useEffect(() => {
-    if (open) void refreshBinary();
+    if (!open) return;
+    void refreshBinary();
+    void window.trawl.system.paths().then(setPaths);
   }, [open, refreshBinary]);
 
   if (!settings) return null;
@@ -253,12 +256,20 @@ export function SettingsDialog() {
             <SectionLabel>About</SectionLabel>
           </div>
           <div className="rounded-xl border border-line bg-white/[0.015] px-3.5 py-3">
-            <div className="flex items-center justify-between">
-              <div>
-                <div className="text-[12.5px] font-medium text-fg">Trawl 0.1.0</div>
-                <div className="mt-0.5 text-[10.5px] text-fg-dim">
-                  Option registry built from yt-dlp {YTDLP_VERSION} · {binary?.platform ?? ''}
+            <div className="flex items-center justify-between gap-4">
+              <div className="min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className="text-[12.5px] font-medium text-fg">Trawl {paths?.version ?? ''}</span>
+                  {paths?.portable ? <Badge tone="info">portable</Badge> : null}
                 </div>
+                <div className="mt-0.5 text-[10.5px] text-fg-dim">
+                  Options from yt-dlp {YTDLP_VERSION} · {binary?.platform ?? ''}
+                </div>
+                {paths ? (
+                  <div className="mt-1 truncate font-mono text-[10px] text-fg-dim/80" title={paths.userData}>
+                    data: {paths.userData}
+                  </div>
+                ) : null}
               </div>
               <div className="flex gap-1.5">
                 <Button

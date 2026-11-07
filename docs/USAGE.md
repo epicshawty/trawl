@@ -38,6 +38,12 @@ Useful flags for stubborn sites: `--cookies-from-browser chrome`, `--proxy`, `--
 
 Every run starts with `--ignore-config`, so your `yt-dlp.conf` never changes what the GUI does. Put anything you need in **Options → Extra arguments** instead — it is appended verbatim and shown in the command preview.
 
+## Portable mode
+
+Drop a file named `portable` next to `Trawl.exe` (or set `TRAWL_PORTABLE=1`) and Trawl keeps **everything** — settings, queue, presets, the yt-dlp binary it downloads, the Chromium profile — inside `data/` in that same folder. Move the folder, and your downloads config moves with it. Delete the folder, and nothing is left behind.
+
+Without the marker, a packaged build behaves like a normal installed app and uses `%APPDATA%/Trawl` (macOS: `~/Library/Application Support/Trawl`, Linux: `~/.config/Trawl`).
+
 ## Settings
 
 | Setting | Meaning |

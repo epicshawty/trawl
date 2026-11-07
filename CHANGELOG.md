@@ -3,6 +3,17 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) · Versioning: [SemVer](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-11-07
+
+### Fixed
+
+- Portable copies were not portable: settings, queue, presets and a downloaded yt-dlp binary all landed in `%APPDATA%/Trawl`. A file named `portable` next to the executable (or `TRAWL_PORTABLE=1`) now redirects user data — including the Chromium profile — into `<app dir>/data`.
+- Settings showed a hardcoded version number instead of the app's real version.
+
+### Changed
+
+- Settings → About shows the active data directory and a `portable` badge.
+
 ## [0.1.1] - 2026-11-07
 
 ### Fixed
@@ -28,5 +39,6 @@ First release.
 - Frameless window with custom title bar, keyboard shortcuts, light/dark-native scrollbars and a dark UI built on Radix + Tailwind 4.
 - GitHub Actions: per-platform builds on tag push, artifacts attached to a GitHub Release.
 
+[0.1.2]: https://github.com/epicshawty/trawl/releases/tag/v0.1.2
 [0.1.1]: https://github.com/epicshawty/trawl/releases/tag/v0.1.1
 [0.1.0]: https://github.com/epicshawty/trawl/releases/tag/v0.1.0

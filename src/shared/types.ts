@@ -208,6 +208,7 @@ export interface TrawlApi {
     revealItem(path: string): Promise<void>;
     copy(text: string): Promise<void>;
     platform(): Promise<string>;
+    paths(): Promise<{ portable: boolean; userData: string; exe: string; version: string }>;
   };
   window: {
     minimize(): void;

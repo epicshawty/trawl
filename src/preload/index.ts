@@ -44,6 +44,7 @@ const api: TrawlApi = {
       await navigator.clipboard.writeText(text);
     },
     platform: () => ipcRenderer.invoke('system:platform'),
+    paths: () => ipcRenderer.invoke('system:paths'),
   },
   window: {
     minimize: () => ipcRenderer.send('window:minimize'),

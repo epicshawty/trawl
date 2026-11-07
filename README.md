@@ -52,6 +52,8 @@ Download the latest build for your platform from [Releases](https://github.com/e
 
 Trawl finds `yt-dlp` on your `PATH`; if it isn't there, **Settings → Get yt-dlp** downloads the official binary into the app's data folder.
 
+**Portable:** create a file named `portable` next to the executable and all state lives in `data/` beside it instead of in AppData — see [usage](docs/USAGE.md#portable-mode).
+
 **ffmpeg** is required for muxing, converting and embedding. For the best YouTube coverage, also install [Deno](https://deno.com) — yt-dlp uses it as a JavaScript runtime and some formats are unavailable without it.
 
 ## Build

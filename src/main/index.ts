@@ -5,7 +5,11 @@ import type { BinaryStatus, DownloadRequest, Job, JobEvent, Preset, Settings } f
 import { QueueManager } from './queue';
 import { probe } from './ytdlp';
 import { resolveBinary, versionOf } from './paths';
+import { applyPortableMode } from './portable';
 import { store } from './store';
+
+// Before anything reads app.getPath('userData').
+const portableState = applyPortableMode();
 
 const isMac = process.platform === 'darwin';
 
@@ -131,6 +135,11 @@ function createWindow(): void {
             return Boolean(button);
           })()`);
           await new Promise((r) => setTimeout(r, 800));
+        }
+        if (process.env.TRAWL_DEMO_JS) {
+          const result = await mainWindow?.webContents.executeJavaScript(process.env.TRAWL_DEMO_JS);
+          console.log('[trawl:demo] js ->', JSON.stringify(result));
+          await new Promise((r) => setTimeout(r, 500));
         }
         const image = await mainWindow?.webContents.capturePage();
         if (image) {
@@ -258,6 +267,12 @@ function registerIpc(): void {
     if (/^https?:/i.test(url)) await shell.openExternal(url);
   });
   ipcMain.handle('system:platform', () => process.platform);
+  ipcMain.handle('system:paths', () => ({
+    portable: portableState.portable,
+    userData: app.getPath('userData'),
+    exe: app.getPath('exe'),
+    version: app.getVersion(),
+  }));
 
   ipcMain.on('window:minimize', () => mainWindow?.minimize());
   ipcMain.on('window:toggleMaximize', () => {
