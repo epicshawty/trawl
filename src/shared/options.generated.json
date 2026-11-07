@@ -1,0 +1,3061 @@
+{
+  "version": "2026.10.26",
+  "generatedFrom": "yt-dlp --help",
+  "groups": [
+    {
+      "name": "General Options",
+      "options": [
+        {
+          "id": "help",
+          "group": "General Options",
+          "short": "-h",
+          "long": "--help",
+          "flags": [
+            "-h",
+            "--help"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Print this help text and exit"
+        },
+        {
+          "id": "version",
+          "group": "General Options",
+          "short": null,
+          "long": "--version",
+          "flags": [
+            "--version"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Print program version and exit"
+        },
+        {
+          "id": "update",
+          "group": "General Options",
+          "short": "-U",
+          "long": "--update",
+          "flags": [
+            "-U",
+            "--update"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Update this program to the latest stable version"
+        },
+        {
+          "id": "no-update",
+          "group": "General Options",
+          "short": null,
+          "long": "--no-update",
+          "flags": [
+            "--no-update"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not check for updates (default)"
+        },
+        {
+          "id": "update-to",
+          "group": "General Options",
+          "short": null,
+          "long": "--update-to",
+          "flags": [
+            "--update-to"
+          ],
+          "metavar": "[CHANNEL]@[TAG]",
+          "optionalMetavar": true,
+          "desc": "Upgrade/downgrade to a specific version. CHANNEL can be a repository as well. CHANNEL and TAG default to \"stable\" and \"latest\" respectively if omitted; See \"UPDATE\" for details. Supported channels: stable, nightly, master"
+        },
+        {
+          "id": "ignore-errors",
+          "group": "General Options",
+          "short": "-i",
+          "long": "--ignore-errors",
+          "flags": [
+            "-i",
+            "--ignore-errors"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Ignore download and postprocessing errors. The download will be considered successful even if the postprocessing fails"
+        },
+        {
+          "id": "no-abort-on-error",
+          "group": "General Options",
+          "short": null,
+          "long": "--no-abort-on-error",
+          "flags": [
+            "--no-abort-on-error"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Continue with next video on download errors; e.g. to skip unavailable videos in a playlist (default)"
+        },
+        {
+          "id": "abort-on-error",
+          "group": "General Options",
+          "short": null,
+          "long": "--abort-on-error",
+          "flags": [
+            "--abort-on-error"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Abort downloading of further videos if an error occurs (Alias: --no-ignore-errors)"
+        },
+        {
+          "id": "list-extractors",
+          "group": "General Options",
+          "short": null,
+          "long": "--list-extractors",
+          "flags": [
+            "--list-extractors"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "List all supported extractors and exit"
+        },
+        {
+          "id": "extractor-descriptions",
+          "group": "General Options",
+          "short": null,
+          "long": "--extractor-descriptions",
+          "flags": [
+            "--extractor-descriptions"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Output descriptions of all supported extractors and exit"
+        },
+        {
+          "id": "use-extractors",
+          "group": "General Options",
+          "short": null,
+          "long": "--use-extractors",
+          "flags": [
+            "--use-extractors"
+          ],
+          "metavar": "NAMES",
+          "optionalMetavar": false,
+          "desc": "Extractor names to use separated by commas. You can also use regexes, \"all\", \"default\" and \"end\" (end URL matching); e.g. --ies \"holodex.*,end,youtube\". Prefix the name with a \"-\" to exclude it, e.g. --ies default,-generic. Use --list-extractors for a list of extractor names. (Alias: --ies)"
+        },
+        {
+          "id": "default-search",
+          "group": "General Options",
+          "short": null,
+          "long": "--default-search",
+          "flags": [
+            "--default-search"
+          ],
+          "metavar": "PREFIX",
+          "optionalMetavar": false,
+          "desc": "Use this prefix for unqualified URLs. E.g. \"gvsearch2:python\" downloads two videos from google videos for the search term \"python\". Use the value \"auto\" to let yt-dlp guess (\"auto_warning\" to emit a warning when guessing). \"error\" just throws an error. The default value \"fixup_error\" repairs broken URLs, but emits an error if this is not possible instead of searching"
+        },
+        {
+          "id": "ignore-config",
+          "group": "General Options",
+          "short": null,
+          "long": "--ignore-config",
+          "flags": [
+            "--ignore-config"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Don't load any more configuration files except those given to --config-locations. For backward compatibility, if this option is found inside the system configuration file, the user configuration is not loaded. (Alias: --no-config)"
+        },
+        {
+          "id": "no-config-locations",
+          "group": "General Options",
+          "short": null,
+          "long": "--no-config-locations",
+          "flags": [
+            "--no-config-locations"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not load any custom configuration files (default). When given inside a configuration file, ignore all previous --config-locations defined in the current file"
+        },
+        {
+          "id": "config-locations",
+          "group": "General Options",
+          "short": null,
+          "long": "--config-locations",
+          "flags": [
+            "--config-locations"
+          ],
+          "metavar": "PATH",
+          "optionalMetavar": false,
+          "desc": "Location of the main configuration file; either the path to the config or its containing directory (\"-\" for stdin). Can be used multiple times and inside other configuration files"
+        },
+        {
+          "id": "plugin-dirs",
+          "group": "General Options",
+          "short": null,
+          "long": "--plugin-dirs",
+          "flags": [
+            "--plugin-dirs"
+          ],
+          "metavar": "DIR",
+          "optionalMetavar": false,
+          "desc": "Path to an additional directory to search for plugins. This option can be used multiple times to add multiple directories. Use \"default\" to search the default plugin directories (default)"
+        },
+        {
+          "id": "no-plugin-dirs",
+          "group": "General Options",
+          "short": null,
+          "long": "--no-plugin-dirs",
+          "flags": [
+            "--no-plugin-dirs"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Clear plugin directories to search, including defaults and those provided by previous --plugin-dirs"
+        },
+        {
+          "id": "js-runtimes",
+          "group": "General Options",
+          "short": null,
+          "long": "--js-runtimes",
+          "flags": [
+            "--js-runtimes"
+          ],
+          "metavar": "RUNTIME[:PATH]",
+          "optionalMetavar": false,
+          "desc": "Additional JavaScript runtime to enable, with an optional location for the runtime (either the path to the binary or its containing directory). This option can be used multiple times to enable multiple runtimes. Supported runtimes are (in order of priority, from highest to lowest): deno, node, quickjs, bun. Only \"deno\" is enabled by default. The highest priority runtime that is both enabled and available will be used. In order to use a lower priority runtime when \"deno\" is available, --no-js- runtimes needs to be passed before enabling other runtimes"
+        },
+        {
+          "id": "no-js-runtimes",
+          "group": "General Options",
+          "short": null,
+          "long": "--no-js-runtimes",
+          "flags": [
+            "--no-js-runtimes"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Clear JavaScript runtimes to enable, including defaults and those provided by previous --js-runtimes"
+        },
+        {
+          "id": "remote-components",
+          "group": "General Options",
+          "short": null,
+          "long": "--remote-components",
+          "flags": [
+            "--remote-components"
+          ],
+          "metavar": "COMPONENT",
+          "optionalMetavar": false,
+          "desc": "Remote components to allow yt-dlp to fetch when required. This option is currently not needed if you are using an official executable or have the requisite version of the yt-dlp-ejs package installed. You can use this option multiple times to allow multiple components. Supported values: ejs:npm (external JavaScript components from npm), ejs:github (external JavaScript components from yt-dlp-ejs GitHub). By default, no remote components are allowed"
+        },
+        {
+          "id": "no-remote-components",
+          "group": "General Options",
+          "short": null,
+          "long": "--no-remote-components",
+          "flags": [
+            "--no-remote-components"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Disallow fetching of all remote components, including any previously allowed by --remote-components or defaults."
+        },
+        {
+          "id": "flat-playlist",
+          "group": "General Options",
+          "short": null,
+          "long": "--flat-playlist",
+          "flags": [
+            "--flat-playlist"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not extract a playlist's URL result entries; some entry metadata may be missing and downloading may be bypassed"
+        },
+        {
+          "id": "no-flat-playlist",
+          "group": "General Options",
+          "short": null,
+          "long": "--no-flat-playlist",
+          "flags": [
+            "--no-flat-playlist"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Fully extract the videos of a playlist (default)"
+        },
+        {
+          "id": "live-from-start",
+          "group": "General Options",
+          "short": null,
+          "long": "--live-from-start",
+          "flags": [
+            "--live-from-start"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Download livestreams from the start. Currently experimental and only supported for YouTube, Twitch, TVer, and mellow-fan"
+        },
+        {
+          "id": "no-live-from-start",
+          "group": "General Options",
+          "short": null,
+          "long": "--no-live-from-start",
+          "flags": [
+            "--no-live-from-start"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Download livestreams from the current time (default)"
+        },
+        {
+          "id": "wait-for-video",
+          "group": "General Options",
+          "short": null,
+          "long": "--wait-for-video",
+          "flags": [
+            "--wait-for-video"
+          ],
+          "metavar": "MIN[-MAX]",
+          "optionalMetavar": false,
+          "desc": "Wait for scheduled streams to become available. Pass the minimum number of seconds (or range) to wait between retries"
+        },
+        {
+          "id": "no-wait-for-video",
+          "group": "General Options",
+          "short": null,
+          "long": "--no-wait-for-video",
+          "flags": [
+            "--no-wait-for-video"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not wait for scheduled streams (default)"
+        },
+        {
+          "id": "mark-watched",
+          "group": "General Options",
+          "short": null,
+          "long": "--mark-watched",
+          "flags": [
+            "--mark-watched"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Mark videos watched (even with --simulate)"
+        },
+        {
+          "id": "no-mark-watched",
+          "group": "General Options",
+          "short": null,
+          "long": "--no-mark-watched",
+          "flags": [
+            "--no-mark-watched"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not mark videos watched (default)"
+        },
+        {
+          "id": "color",
+          "group": "General Options",
+          "short": null,
+          "long": "--color",
+          "flags": [
+            "--color"
+          ],
+          "metavar": "[STREAM:]POLICY",
+          "optionalMetavar": true,
+          "desc": "Whether to emit color codes in output, optionally prefixed by the STREAM (stdout or stderr) to apply the setting to. Can be one of \"always\", \"auto\" (default), \"never\", or \"no_color\" (use non color terminal sequences). Use \"auto-tty\" or \"no_color-tty\" to decide based on terminal support only. Can be used multiple times"
+        },
+        {
+          "id": "compat-options",
+          "group": "General Options",
+          "short": null,
+          "long": "--compat-options",
+          "flags": [
+            "--compat-options"
+          ],
+          "metavar": "OPTS",
+          "optionalMetavar": false,
+          "desc": "Options that can help keep compatibility with youtube-dl or youtube-dlc configurations by reverting some of the changes made in yt-dlp. See \"Differences in default behavior\" for details"
+        },
+        {
+          "id": "alias",
+          "group": "General Options",
+          "short": null,
+          "long": "--alias",
+          "flags": [
+            "--alias"
+          ],
+          "metavar": "ALIASES OPTIONS",
+          "optionalMetavar": false,
+          "desc": "Create aliases for an option string. Unless an alias starts with a dash \"-\", it is prefixed with \"--\". Arguments are parsed according to the Python string formatting mini-language. E.g. --alias get-audio,-X \"-S aext:{0},abr -x --audio-format {0}\" creates options \"--get-audio\" and \"-X\" that takes an argument (ARG0) and expands to \"-S aext:ARG0,abr -x --audio-format ARG0\". All defined aliases are listed in the --help output. Alias options can trigger more aliases; so be careful to avoid defining recursive options. As a safety measure, each alias may be triggered a maximum of 100 times. This option can be used multiple times"
+        },
+        {
+          "id": "preset-alias",
+          "group": "General Options",
+          "short": "-t",
+          "long": "--preset-alias",
+          "flags": [
+            "-t",
+            "--preset-alias"
+          ],
+          "metavar": "PRESET",
+          "optionalMetavar": false,
+          "desc": "Applies a predefined set of options. e.g. --preset-alias mp3. The following presets are available: mp3, aac, mp4, mkv, sleep. See the \"Preset Aliases\" section at the end for more info. This option can be used multiple times"
+        }
+      ]
+    },
+    {
+      "name": "Network Options",
+      "options": [
+        {
+          "id": "proxy",
+          "group": "Network Options",
+          "short": null,
+          "long": "--proxy",
+          "flags": [
+            "--proxy"
+          ],
+          "metavar": "URL",
+          "optionalMetavar": false,
+          "desc": "Use the specified HTTP/HTTPS/SOCKS proxy. To enable SOCKS proxy, specify a proper scheme, e.g. socks5://user:pass@127.0.0.1:1080/. Pass in an empty string (--proxy \"\") for direct connection"
+        },
+        {
+          "id": "socket-timeout",
+          "group": "Network Options",
+          "short": null,
+          "long": "--socket-timeout",
+          "flags": [
+            "--socket-timeout"
+          ],
+          "metavar": "SECONDS",
+          "optionalMetavar": false,
+          "desc": "Time to wait before giving up, in seconds"
+        },
+        {
+          "id": "source-address",
+          "group": "Network Options",
+          "short": null,
+          "long": "--source-address",
+          "flags": [
+            "--source-address"
+          ],
+          "metavar": "IP",
+          "optionalMetavar": false,
+          "desc": "Client-side IP address to bind to"
+        },
+        {
+          "id": "impersonate",
+          "group": "Network Options",
+          "short": null,
+          "long": "--impersonate",
+          "flags": [
+            "--impersonate"
+          ],
+          "metavar": "CLIENT[:OS]",
+          "optionalMetavar": false,
+          "desc": "Client to impersonate for requests. E.g. chrome, chrome-110, chrome:windows-10. Pass --impersonate=\"\" to impersonate any client. Note that forcing impersonation for all requests may have a detrimental impact on download speed and stability"
+        },
+        {
+          "id": "list-impersonate-targets",
+          "group": "Network Options",
+          "short": null,
+          "long": "--list-impersonate-targets",
+          "flags": [
+            "--list-impersonate-targets"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "List available clients to impersonate."
+        },
+        {
+          "id": "force-ipv4",
+          "group": "Network Options",
+          "short": "-4",
+          "long": "--force-ipv4",
+          "flags": [
+            "-4",
+            "--force-ipv4"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Make all connections via IPv4"
+        },
+        {
+          "id": "force-ipv6",
+          "group": "Network Options",
+          "short": "-6",
+          "long": "--force-ipv6",
+          "flags": [
+            "-6",
+            "--force-ipv6"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Make all connections via IPv6"
+        },
+        {
+          "id": "enable-file-urls",
+          "group": "Network Options",
+          "short": null,
+          "long": "--enable-file-urls",
+          "flags": [
+            "--enable-file-urls"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Enable file:// URLs. This is disabled by default for security reasons."
+        }
+      ]
+    },
+    {
+      "name": "Geo-restriction",
+      "options": [
+        {
+          "id": "geo-verification-proxy",
+          "group": "Geo-restriction",
+          "short": null,
+          "long": "--geo-verification-proxy",
+          "flags": [
+            "--geo-verification-proxy"
+          ],
+          "metavar": "URL",
+          "optionalMetavar": false,
+          "desc": "Use this proxy to verify the IP address for some geo-restricted sites. The default proxy specified by --proxy (or none, if the option is not present) is used for the actual downloading"
+        },
+        {
+          "id": "xff",
+          "group": "Geo-restriction",
+          "short": null,
+          "long": "--xff",
+          "flags": [
+            "--xff"
+          ],
+          "metavar": "VALUE",
+          "optionalMetavar": false,
+          "desc": "How to fake X-Forwarded-For HTTP header to try bypassing geographic restriction. One of \"default\" (only when known to be useful), \"never\", an IP block in CIDR notation, or a two-letter ISO 3166-2 country code"
+        }
+      ]
+    },
+    {
+      "name": "Video Selection",
+      "options": [
+        {
+          "id": "playlist-items",
+          "group": "Video Selection",
+          "short": "-I",
+          "long": "--playlist-items",
+          "flags": [
+            "-I",
+            "--playlist-items"
+          ],
+          "metavar": "ITEM_SPEC",
+          "optionalMetavar": false,
+          "desc": "Comma-separated playlist_index of the items to download. You can specify a range using \"[START]:[STOP][:STEP]\". For backward compatibility, START-STOP is also supported. Use negative indices to count from the right and negative STEP to download in reverse order. E.g. \"-I 1:3,7,-5::2\" used on a playlist of size 15 will download the items at index 1,2,3,7,11,13,15"
+        },
+        {
+          "id": "min-filesize",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--min-filesize",
+          "flags": [
+            "--min-filesize"
+          ],
+          "metavar": "SIZE",
+          "optionalMetavar": false,
+          "desc": "Abort download if filesize is smaller than SIZE, e.g. 50k or 44.6M"
+        },
+        {
+          "id": "max-filesize",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--max-filesize",
+          "flags": [
+            "--max-filesize"
+          ],
+          "metavar": "SIZE",
+          "optionalMetavar": false,
+          "desc": "Abort download if filesize is larger than SIZE, e.g. 50k or 44.6M"
+        },
+        {
+          "id": "date",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--date",
+          "flags": [
+            "--date"
+          ],
+          "metavar": "DATE",
+          "optionalMetavar": false,
+          "desc": "Download only videos uploaded on this date. The date can be \"YYYYMMDD\" or in the format [now|today|yesterday][- N[day|week|month|year]]. E.g. \"--date today-2weeks\" downloads only videos uploaded on the same day two weeks ago"
+        },
+        {
+          "id": "datebefore",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--datebefore",
+          "flags": [
+            "--datebefore"
+          ],
+          "metavar": "DATE",
+          "optionalMetavar": false,
+          "desc": "Download only videos uploaded on or before this date. The date formats accepted are the same as --date"
+        },
+        {
+          "id": "dateafter",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--dateafter",
+          "flags": [
+            "--dateafter"
+          ],
+          "metavar": "DATE",
+          "optionalMetavar": false,
+          "desc": "Download only videos uploaded on or after this date. The date formats accepted are the same as --date"
+        },
+        {
+          "id": "match-filters",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--match-filters",
+          "flags": [
+            "--match-filters"
+          ],
+          "metavar": "FILTER",
+          "optionalMetavar": false,
+          "desc": "Generic video filter. Any \"OUTPUT TEMPLATE\" field can be compared with a number or a string using the operators defined in \"Filtering Formats\". You can also simply specify a field to match if the field is present, use \"!field\" to check if the field is not present, and \"&\" to check multiple conditions. Use a \"\\\" to escape \"&\" or quotes if needed. If used multiple times, the filter matches if at least one of the conditions is met. E.g. --match-filters !is_live --match-filters \"like_count>?100 & description~='(?i)\\bcats \\& dogs\\b'\" matches only videos that are not live OR those that have a like count more than 100 (or the like field is not available) and also has a description that contains the phrase \"cats & dogs\" (caseless). Use \"--match-filters -\" to interactively ask whether to download each video"
+        },
+        {
+          "id": "no-match-filters",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--no-match-filters",
+          "flags": [
+            "--no-match-filters"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not use any --match-filters (default)"
+        },
+        {
+          "id": "break-match-filters",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--break-match-filters",
+          "flags": [
+            "--break-match-filters"
+          ],
+          "metavar": "FILTER",
+          "optionalMetavar": false,
+          "desc": "Same as \"--match-filters\" but stops the download process when a video is rejected"
+        },
+        {
+          "id": "no-break-match-filters",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--no-break-match-filters",
+          "flags": [
+            "--no-break-match-filters"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not use any --break-match-filters (default)"
+        },
+        {
+          "id": "no-playlist",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--no-playlist",
+          "flags": [
+            "--no-playlist"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Download only the video, if the URL refers to a video and a playlist"
+        },
+        {
+          "id": "yes-playlist",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--yes-playlist",
+          "flags": [
+            "--yes-playlist"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Download the playlist, if the URL refers to a video and a playlist"
+        },
+        {
+          "id": "age-limit",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--age-limit",
+          "flags": [
+            "--age-limit"
+          ],
+          "metavar": "YEARS",
+          "optionalMetavar": false,
+          "desc": "Download only videos suitable for the given age"
+        },
+        {
+          "id": "download-archive",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--download-archive",
+          "flags": [
+            "--download-archive"
+          ],
+          "metavar": "FILE",
+          "optionalMetavar": false,
+          "desc": "Download only videos not listed in the archive file. Record the IDs of all downloaded videos in it"
+        },
+        {
+          "id": "no-download-archive",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--no-download-archive",
+          "flags": [
+            "--no-download-archive"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not use archive file (default)"
+        },
+        {
+          "id": "max-downloads",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--max-downloads",
+          "flags": [
+            "--max-downloads"
+          ],
+          "metavar": "NUMBER",
+          "optionalMetavar": false,
+          "desc": "Abort after downloading NUMBER files"
+        },
+        {
+          "id": "break-on-existing",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--break-on-existing",
+          "flags": [
+            "--break-on-existing"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Stop the download process when encountering a file that is in the archive supplied with the --download-archive option"
+        },
+        {
+          "id": "no-break-on-existing",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--no-break-on-existing",
+          "flags": [
+            "--no-break-on-existing"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not stop the download process when encountering a file that is in the archive (default)"
+        },
+        {
+          "id": "break-per-input",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--break-per-input",
+          "flags": [
+            "--break-per-input"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Alters --max-downloads, --break-on-existing, --break-match-filters, and autonumber to reset per input URL"
+        },
+        {
+          "id": "no-break-per-input",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--no-break-per-input",
+          "flags": [
+            "--no-break-per-input"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "--break-on-existing and similar options terminates the entire download queue"
+        },
+        {
+          "id": "skip-playlist-after-errors",
+          "group": "Video Selection",
+          "short": null,
+          "long": "--skip-playlist-after-errors",
+          "flags": [
+            "--skip-playlist-after-errors"
+          ],
+          "metavar": "N",
+          "optionalMetavar": false,
+          "desc": "Number of allowed failures until the rest of the playlist is skipped"
+        }
+      ]
+    },
+    {
+      "name": "Download Options",
+      "options": [
+        {
+          "id": "concurrent-fragments",
+          "group": "Download Options",
+          "short": "-N",
+          "long": "--concurrent-fragments",
+          "flags": [
+            "-N",
+            "--concurrent-fragments"
+          ],
+          "metavar": "N",
+          "optionalMetavar": false,
+          "desc": "Number of fragments of a dash/hlsnative video that should be downloaded concurrently (default is 1)"
+        },
+        {
+          "id": "limit-rate",
+          "group": "Download Options",
+          "short": "-r",
+          "long": "--limit-rate",
+          "flags": [
+            "-r",
+            "--limit-rate"
+          ],
+          "metavar": "RATE",
+          "optionalMetavar": false,
+          "desc": "Maximum download rate in bytes per second, e.g. 50K or 4.2M"
+        },
+        {
+          "id": "throttled-rate",
+          "group": "Download Options",
+          "short": null,
+          "long": "--throttled-rate",
+          "flags": [
+            "--throttled-rate"
+          ],
+          "metavar": "RATE",
+          "optionalMetavar": false,
+          "desc": "Minimum download rate in bytes per second below which throttling is assumed and the video data is re-extracted, e.g. 100K"
+        },
+        {
+          "id": "retries",
+          "group": "Download Options",
+          "short": "-R",
+          "long": "--retries",
+          "flags": [
+            "-R",
+            "--retries"
+          ],
+          "metavar": "RETRIES",
+          "optionalMetavar": false,
+          "desc": "Number of retries (default is 10), or \"infinite\""
+        },
+        {
+          "id": "file-access-retries",
+          "group": "Download Options",
+          "short": null,
+          "long": "--file-access-retries",
+          "flags": [
+            "--file-access-retries"
+          ],
+          "metavar": "RETRIES",
+          "optionalMetavar": false,
+          "desc": "Number of times to retry on file access error (default is 3), or \"infinite\""
+        },
+        {
+          "id": "fragment-retries",
+          "group": "Download Options",
+          "short": null,
+          "long": "--fragment-retries",
+          "flags": [
+            "--fragment-retries"
+          ],
+          "metavar": "RETRIES",
+          "optionalMetavar": false,
+          "desc": "Number of retries for a fragment (default is 10), or \"infinite\" (DASH, hlsnative and ISM)"
+        },
+        {
+          "id": "retry-sleep",
+          "group": "Download Options",
+          "short": null,
+          "long": "--retry-sleep",
+          "flags": [
+            "--retry-sleep"
+          ],
+          "metavar": "[TYPE:]EXPR",
+          "optionalMetavar": true,
+          "desc": "Time to sleep between retries in seconds (optionally) prefixed by the type of retry (http (default), fragment, file_access, extractor) to apply the sleep to. EXPR can be a number, linear=START[:END[:STEP=1]] or exp=START[:END[:BASE=2]]. This option can be used multiple times to set the sleep for the different retry types, e.g. --retry-sleep linear=1::2 --retry-sleep fragment:exp=1:20"
+        },
+        {
+          "id": "skip-unavailable-fragments",
+          "group": "Download Options",
+          "short": null,
+          "long": "--skip-unavailable-fragments",
+          "flags": [
+            "--skip-unavailable-fragments"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Skip unavailable fragments for DASH, hlsnative and ISM downloads (default) (Alias: --no-abort-on-unavailable-fragments) Abort download if a fragment is unavailable (Alias: --no-skip-unavailable-fragments)"
+        },
+        {
+          "id": "keep-fragments",
+          "group": "Download Options",
+          "short": null,
+          "long": "--keep-fragments",
+          "flags": [
+            "--keep-fragments"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Keep downloaded fragments on disk after downloading is finished"
+        },
+        {
+          "id": "no-keep-fragments",
+          "group": "Download Options",
+          "short": null,
+          "long": "--no-keep-fragments",
+          "flags": [
+            "--no-keep-fragments"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Delete downloaded fragments after downloading is finished (default)"
+        },
+        {
+          "id": "buffer-size",
+          "group": "Download Options",
+          "short": null,
+          "long": "--buffer-size",
+          "flags": [
+            "--buffer-size"
+          ],
+          "metavar": "SIZE",
+          "optionalMetavar": false,
+          "desc": "Size of download buffer, e.g. 1024 or 16K (default is 1024)"
+        },
+        {
+          "id": "resize-buffer",
+          "group": "Download Options",
+          "short": null,
+          "long": "--resize-buffer",
+          "flags": [
+            "--resize-buffer"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "The buffer size is automatically resized from an initial value of --buffer-size (default)"
+        },
+        {
+          "id": "no-resize-buffer",
+          "group": "Download Options",
+          "short": null,
+          "long": "--no-resize-buffer",
+          "flags": [
+            "--no-resize-buffer"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not automatically adjust the buffer size"
+        },
+        {
+          "id": "http-chunk-size",
+          "group": "Download Options",
+          "short": null,
+          "long": "--http-chunk-size",
+          "flags": [
+            "--http-chunk-size"
+          ],
+          "metavar": "SIZE",
+          "optionalMetavar": false,
+          "desc": "Size of a chunk for chunk-based HTTP downloading, e.g. 10485760 or 10M (default is disabled). May be useful for bypassing bandwidth throttling imposed by a webserver (experimental)"
+        },
+        {
+          "id": "playlist-random",
+          "group": "Download Options",
+          "short": null,
+          "long": "--playlist-random",
+          "flags": [
+            "--playlist-random"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Download playlist videos in random order"
+        },
+        {
+          "id": "lazy-playlist",
+          "group": "Download Options",
+          "short": null,
+          "long": "--lazy-playlist",
+          "flags": [
+            "--lazy-playlist"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Process entries in the playlist as they are received. This disables n_entries, --playlist-random and --playlist-reverse"
+        },
+        {
+          "id": "no-lazy-playlist",
+          "group": "Download Options",
+          "short": null,
+          "long": "--no-lazy-playlist",
+          "flags": [
+            "--no-lazy-playlist"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Process videos in the playlist only after the entire playlist is parsed (default)"
+        },
+        {
+          "id": "hls-use-mpegts",
+          "group": "Download Options",
+          "short": null,
+          "long": "--hls-use-mpegts",
+          "flags": [
+            "--hls-use-mpegts"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Use the mpegts container for HLS videos; allowing some players to play the video while downloading, and reducing the chance of file corruption if download is interrupted. This is enabled by default for live streams"
+        },
+        {
+          "id": "no-hls-use-mpegts",
+          "group": "Download Options",
+          "short": null,
+          "long": "--no-hls-use-mpegts",
+          "flags": [
+            "--no-hls-use-mpegts"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not use the mpegts container for HLS videos. This is default when not downloading live streams"
+        },
+        {
+          "id": "download-sections",
+          "group": "Download Options",
+          "short": null,
+          "long": "--download-sections",
+          "flags": [
+            "--download-sections"
+          ],
+          "metavar": "REGEX",
+          "optionalMetavar": false,
+          "desc": "Download only chapters that match the regular expression. A \"*\" prefix denotes time-range instead of chapter. Negative timestamps are calculated from the end. \"*from-url\" can be used to download between the \"start_time\" and \"end_time\" extracted from the URL. Needs ffmpeg. This option can be used multiple times to download multiple sections, e.g. --download-sections \"*10:15-inf\" --download-sections \"intro\""
+        },
+        {
+          "id": "downloader",
+          "group": "Download Options",
+          "short": null,
+          "long": "--downloader",
+          "flags": [
+            "--downloader"
+          ],
+          "metavar": "[PROTO:]NAME",
+          "optionalMetavar": true,
+          "desc": "Name or path of the external downloader to use (optionally) prefixed by the protocols (http, ftp, m3u8, dash, rtmp) to use it for. Currently supports native, aria2c, axel, curl, ffmpeg, httpie, wget. You can use this option multiple times to set different downloaders for different protocols. E.g. --downloader aria2c --downloader \"dash,m3u8:native\" will use aria2c for http/ftp downloads, and the native downloader for dash/m3u8 downloads (Alias: --external-downloader)"
+        },
+        {
+          "id": "downloader-args",
+          "group": "Download Options",
+          "short": null,
+          "long": "--downloader-args",
+          "flags": [
+            "--downloader-args"
+          ],
+          "metavar": "NAME:ARGS",
+          "optionalMetavar": false,
+          "desc": "Give these arguments to the external downloader. Specify the downloader name and the arguments separated by a colon \":\". For ffmpeg, arguments can be passed to different positions using the same syntax as --postprocessor-args. You can use this option multiple times to give different arguments to different downloaders (Alias: --external-downloader-args)"
+        }
+      ]
+    },
+    {
+      "name": "Filesystem Options",
+      "options": [
+        {
+          "id": "batch-file",
+          "group": "Filesystem Options",
+          "short": "-a",
+          "long": "--batch-file",
+          "flags": [
+            "-a",
+            "--batch-file"
+          ],
+          "metavar": "FILE",
+          "optionalMetavar": false,
+          "desc": "File containing URLs to download (\"-\" for stdin), one URL per line. Lines starting with \"#\", \";\" or \"]\" are considered as comments and ignored"
+        },
+        {
+          "id": "no-batch-file",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-batch-file",
+          "flags": [
+            "--no-batch-file"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not read URLs from batch file (default)"
+        },
+        {
+          "id": "paths",
+          "group": "Filesystem Options",
+          "short": "-P",
+          "long": "--paths",
+          "flags": [
+            "-P",
+            "--paths"
+          ],
+          "metavar": "[TYPES:]PATH",
+          "optionalMetavar": true,
+          "desc": "The paths where the files should be downloaded. Specify the type of file and the path separated by a colon \":\". All the same TYPES as --output are supported. Additionally, you can also provide \"home\" (default) and \"temp\" paths. All intermediary files are first downloaded to the temp path and then the final files are moved over to the home path after download is finished. This option is ignored if --output is an absolute path"
+        },
+        {
+          "id": "output",
+          "group": "Filesystem Options",
+          "short": "-o",
+          "long": "--output",
+          "flags": [
+            "-o",
+            "--output"
+          ],
+          "metavar": "[TYPES:]TEMPLATE",
+          "optionalMetavar": true,
+          "desc": "Output filename template; see \"OUTPUT TEMPLATE\" for details"
+        },
+        {
+          "id": "output-na-placeholder",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--output-na-placeholder",
+          "flags": [
+            "--output-na-placeholder"
+          ],
+          "metavar": "TEXT",
+          "optionalMetavar": false,
+          "desc": "Placeholder for unavailable fields in --output (default: \"NA\")"
+        },
+        {
+          "id": "restrict-filenames",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--restrict-filenames",
+          "flags": [
+            "--restrict-filenames"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Restrict filenames to only ASCII characters, and avoid \"&\" and spaces in filenames"
+        },
+        {
+          "id": "no-restrict-filenames",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-restrict-filenames",
+          "flags": [
+            "--no-restrict-filenames"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Allow Unicode characters, \"&\" and spaces in filenames (default)"
+        },
+        {
+          "id": "windows-filenames",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--windows-filenames",
+          "flags": [
+            "--windows-filenames"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Force filenames to be Windows-compatible"
+        },
+        {
+          "id": "no-windows-filenames",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-windows-filenames",
+          "flags": [
+            "--no-windows-filenames"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Sanitize filenames only minimally"
+        },
+        {
+          "id": "trim-filenames",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--trim-filenames",
+          "flags": [
+            "--trim-filenames"
+          ],
+          "metavar": "LENGTH",
+          "optionalMetavar": false,
+          "desc": "Limit the filename length (excluding extension) to the specified number of characters"
+        },
+        {
+          "id": "no-overwrites",
+          "group": "Filesystem Options",
+          "short": "-w",
+          "long": "--no-overwrites",
+          "flags": [
+            "-w",
+            "--no-overwrites"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not overwrite any files"
+        },
+        {
+          "id": "force-overwrites",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--force-overwrites",
+          "flags": [
+            "--force-overwrites"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Overwrite all video and metadata files. This option includes --no-continue"
+        },
+        {
+          "id": "no-force-overwrites",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-force-overwrites",
+          "flags": [
+            "--no-force-overwrites"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not overwrite the video, but overwrite related files (default)"
+        },
+        {
+          "id": "continue",
+          "group": "Filesystem Options",
+          "short": "-c",
+          "long": "--continue",
+          "flags": [
+            "-c",
+            "--continue"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Resume partially downloaded files/fragments (default)"
+        },
+        {
+          "id": "no-continue",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-continue",
+          "flags": [
+            "--no-continue"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not resume partially downloaded fragments. If the file is not fragmented, restart download of the entire file"
+        },
+        {
+          "id": "part",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--part",
+          "flags": [
+            "--part"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Use .part files instead of writing directly into output file (default)"
+        },
+        {
+          "id": "no-part",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-part",
+          "flags": [
+            "--no-part"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not use .part files - write directly into output file"
+        },
+        {
+          "id": "mtime",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--mtime",
+          "flags": [
+            "--mtime"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Use the Last-modified header to set the file modification time"
+        },
+        {
+          "id": "no-mtime",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-mtime",
+          "flags": [
+            "--no-mtime"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not use the Last-modified header to set the file modification time (default)"
+        },
+        {
+          "id": "write-description",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--write-description",
+          "flags": [
+            "--write-description"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write video description to a .description file"
+        },
+        {
+          "id": "no-write-description",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-write-description",
+          "flags": [
+            "--no-write-description"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not write video description (default)"
+        },
+        {
+          "id": "write-info-json",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--write-info-json",
+          "flags": [
+            "--write-info-json"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write video metadata to a .info.json file (this may contain personal information)"
+        },
+        {
+          "id": "no-write-info-json",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-write-info-json",
+          "flags": [
+            "--no-write-info-json"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not write video metadata (default)"
+        },
+        {
+          "id": "write-playlist-metafiles",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--write-playlist-metafiles",
+          "flags": [
+            "--write-playlist-metafiles"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write playlist metadata in addition to the video metadata when using --write-info-json, --write-description etc. (default)"
+        },
+        {
+          "id": "no-write-playlist-metafiles",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-write-playlist-metafiles",
+          "flags": [
+            "--no-write-playlist-metafiles"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not write playlist metadata when using --write-info-json, --write-description etc."
+        },
+        {
+          "id": "clean-info-json",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--clean-info-json",
+          "flags": [
+            "--clean-info-json"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Remove some internal metadata such as filenames from the infojson (default)"
+        },
+        {
+          "id": "no-clean-info-json",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-clean-info-json",
+          "flags": [
+            "--no-clean-info-json"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write all fields to the infojson"
+        },
+        {
+          "id": "write-comments",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--write-comments",
+          "flags": [
+            "--write-comments"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Retrieve video comments to be placed in the infojson. The comments are fetched even without this option if the extraction is known to be quick (Alias: --get-comments)"
+        },
+        {
+          "id": "no-write-comments",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-write-comments",
+          "flags": [
+            "--no-write-comments"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not retrieve video comments unless the extraction is known to be quick (Alias: --no-get-comments)"
+        },
+        {
+          "id": "load-info-json",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--load-info-json",
+          "flags": [
+            "--load-info-json"
+          ],
+          "metavar": "FILE",
+          "optionalMetavar": false,
+          "desc": "JSON file containing the video information (created with the \"--write-info-json\" option)"
+        },
+        {
+          "id": "cookies",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--cookies",
+          "flags": [
+            "--cookies"
+          ],
+          "metavar": "FILE",
+          "optionalMetavar": false,
+          "desc": "Netscape formatted file to read cookies from and dump cookie jar in"
+        },
+        {
+          "id": "no-cookies",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-cookies",
+          "flags": [
+            "--no-cookies"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not read/dump cookies from/to file (default) The name of the browser to load cookies from. Currently supported browsers are: brave, chrome, chromium, edge, firefox, opera, safari, vivaldi, whale. Optionally, the KEYRING used for decrypting Chromium cookies on Linux, the name/path of the PROFILE to load cookies from, and the CONTAINER name (if Firefox) (\"none\" for no container) can be given with their respective separators. By default, all containers of the most recently accessed profile are used. Currently supported keyrings are: basictext, gnomekeyring, kwallet, kwallet5, kwallet6"
+        },
+        {
+          "id": "no-cookies-from-browser",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-cookies-from-browser",
+          "flags": [
+            "--no-cookies-from-browser"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not load cookies from browser (default)"
+        },
+        {
+          "id": "cache-dir",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--cache-dir",
+          "flags": [
+            "--cache-dir"
+          ],
+          "metavar": "DIR",
+          "optionalMetavar": false,
+          "desc": "Location in the filesystem where yt-dlp can store some downloaded information (such as client ids and signatures) permanently. By default ${XDG_CACHE_HOME}/yt-dlp"
+        },
+        {
+          "id": "no-cache-dir",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--no-cache-dir",
+          "flags": [
+            "--no-cache-dir"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Disable filesystem caching"
+        },
+        {
+          "id": "rm-cache-dir",
+          "group": "Filesystem Options",
+          "short": null,
+          "long": "--rm-cache-dir",
+          "flags": [
+            "--rm-cache-dir"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Delete all filesystem cache files"
+        }
+      ]
+    },
+    {
+      "name": "Thumbnail Options",
+      "options": [
+        {
+          "id": "write-thumbnail",
+          "group": "Thumbnail Options",
+          "short": null,
+          "long": "--write-thumbnail",
+          "flags": [
+            "--write-thumbnail"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write thumbnail image to disk"
+        },
+        {
+          "id": "no-write-thumbnail",
+          "group": "Thumbnail Options",
+          "short": null,
+          "long": "--no-write-thumbnail",
+          "flags": [
+            "--no-write-thumbnail"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not write thumbnail image to disk (default)"
+        },
+        {
+          "id": "write-all-thumbnails",
+          "group": "Thumbnail Options",
+          "short": null,
+          "long": "--write-all-thumbnails",
+          "flags": [
+            "--write-all-thumbnails"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write all thumbnail image formats to disk"
+        },
+        {
+          "id": "list-thumbnails",
+          "group": "Thumbnail Options",
+          "short": null,
+          "long": "--list-thumbnails",
+          "flags": [
+            "--list-thumbnails"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "List available thumbnails of each video. Simulate unless --no-simulate is used"
+        }
+      ]
+    },
+    {
+      "name": "Internet Shortcut Options",
+      "options": [
+        {
+          "id": "write-link",
+          "group": "Internet Shortcut Options",
+          "short": null,
+          "long": "--write-link",
+          "flags": [
+            "--write-link"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write an internet shortcut file, depending on the current platform (.url, .webloc or .desktop). The URL may be cached by the OS"
+        },
+        {
+          "id": "write-url-link",
+          "group": "Internet Shortcut Options",
+          "short": null,
+          "long": "--write-url-link",
+          "flags": [
+            "--write-url-link"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write a .url Windows internet shortcut. The OS caches the URL based on the file path"
+        },
+        {
+          "id": "write-webloc-link",
+          "group": "Internet Shortcut Options",
+          "short": null,
+          "long": "--write-webloc-link",
+          "flags": [
+            "--write-webloc-link"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write a .webloc macOS internet shortcut"
+        },
+        {
+          "id": "write-desktop-link",
+          "group": "Internet Shortcut Options",
+          "short": null,
+          "long": "--write-desktop-link",
+          "flags": [
+            "--write-desktop-link"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write a .desktop Linux internet shortcut"
+        }
+      ]
+    },
+    {
+      "name": "Verbosity and Simulation Options",
+      "options": [
+        {
+          "id": "quiet",
+          "group": "Verbosity and Simulation Options",
+          "short": "-q",
+          "long": "--quiet",
+          "flags": [
+            "-q",
+            "--quiet"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Activate quiet mode. If used with --verbose, print the log to stderr"
+        },
+        {
+          "id": "no-quiet",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--no-quiet",
+          "flags": [
+            "--no-quiet"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Deactivate quiet mode. (Default)"
+        },
+        {
+          "id": "no-warnings",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--no-warnings",
+          "flags": [
+            "--no-warnings"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Ignore warnings"
+        },
+        {
+          "id": "simulate",
+          "group": "Verbosity and Simulation Options",
+          "short": "-s",
+          "long": "--simulate",
+          "flags": [
+            "-s",
+            "--simulate"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not download the video and do not write anything to disk"
+        },
+        {
+          "id": "no-simulate",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--no-simulate",
+          "flags": [
+            "--no-simulate"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Download the video even if printing/listing options are used"
+        },
+        {
+          "id": "ignore-no-formats-error",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--ignore-no-formats-error",
+          "flags": [
+            "--ignore-no-formats-error"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Ignore \"No video formats\" error. Useful for extracting metadata even if the videos are not actually available for download (experimental)"
+        },
+        {
+          "id": "no-ignore-no-formats-error",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--no-ignore-no-formats-error",
+          "flags": [
+            "--no-ignore-no-formats-error"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Throw error when no downloadable video formats are found (default)"
+        },
+        {
+          "id": "skip-download",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--skip-download",
+          "flags": [
+            "--skip-download"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not download the video but write all related files (Alias: --no-download)"
+        },
+        {
+          "id": "print",
+          "group": "Verbosity and Simulation Options",
+          "short": "-O",
+          "long": "--print",
+          "flags": [
+            "-O",
+            "--print"
+          ],
+          "metavar": "[WHEN:]TEMPLATE",
+          "optionalMetavar": true,
+          "desc": "Field name or output template to print to screen, optionally prefixed with when to print it, separated by a \":\". Supported values of \"WHEN\" are the same as that of --use-postprocessor (default: video). Implies --quiet. Implies --simulate unless --no-simulate or later stages of WHEN are used. This option can be used multiple times Append given template to the file. The values of WHEN and TEMPLATE are the same as that of --print. FILE uses the same syntax as the output template. This option can be used multiple times"
+        },
+        {
+          "id": "dump-json",
+          "group": "Verbosity and Simulation Options",
+          "short": "-j",
+          "long": "--dump-json",
+          "flags": [
+            "-j",
+            "--dump-json"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Quiet, but print JSON information for each video. Simulate unless --no-simulate is used. See \"OUTPUT TEMPLATE\" for a description of available keys"
+        },
+        {
+          "id": "dump-single-json",
+          "group": "Verbosity and Simulation Options",
+          "short": "-J",
+          "long": "--dump-single-json",
+          "flags": [
+            "-J",
+            "--dump-single-json"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Quiet, but print JSON information for each URL or infojson passed. Simulate unless --no-simulate is used. If the URL refers to a playlist, the whole playlist information is dumped in a single line"
+        },
+        {
+          "id": "force-write-archive",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--force-write-archive",
+          "flags": [
+            "--force-write-archive"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Force download archive entries to be written as far as no errors occur, even if -s or another simulation option is used (Alias: --force-download-archive)"
+        },
+        {
+          "id": "newline",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--newline",
+          "flags": [
+            "--newline"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Output progress bar as new lines"
+        },
+        {
+          "id": "no-progress",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--no-progress",
+          "flags": [
+            "--no-progress"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not print progress bar"
+        },
+        {
+          "id": "progress",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--progress",
+          "flags": [
+            "--progress"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Show progress bar, even if in quiet mode"
+        },
+        {
+          "id": "console-title",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--console-title",
+          "flags": [
+            "--console-title"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Display progress in console titlebar Template for progress outputs, optionally prefixed with one of \"download:\" (default), \"download-title:\" (the console title), \"postprocess:\",  or \"postprocess-title:\". The video's fields are accessible under the \"info\" key and the progress attributes are accessible under \"progress\" key. E.g. --console-title --progress-template \"download- title:%(info.id)s-%(progress.eta)s\""
+        },
+        {
+          "id": "progress-delta",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--progress-delta",
+          "flags": [
+            "--progress-delta"
+          ],
+          "metavar": "SECONDS",
+          "optionalMetavar": false,
+          "desc": "Time between progress output (default: 0)"
+        },
+        {
+          "id": "verbose",
+          "group": "Verbosity and Simulation Options",
+          "short": "-v",
+          "long": "--verbose",
+          "flags": [
+            "-v",
+            "--verbose"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Print various debugging information"
+        },
+        {
+          "id": "dump-pages",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--dump-pages",
+          "flags": [
+            "--dump-pages"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Print downloaded pages encoded using base64 to debug problems (very verbose)"
+        },
+        {
+          "id": "write-pages",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--write-pages",
+          "flags": [
+            "--write-pages"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write downloaded intermediary pages to files in the current directory to debug problems"
+        },
+        {
+          "id": "print-traffic",
+          "group": "Verbosity and Simulation Options",
+          "short": null,
+          "long": "--print-traffic",
+          "flags": [
+            "--print-traffic"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Display sent and read HTTP traffic"
+        }
+      ]
+    },
+    {
+      "name": "Workarounds",
+      "options": [
+        {
+          "id": "encoding",
+          "group": "Workarounds",
+          "short": null,
+          "long": "--encoding",
+          "flags": [
+            "--encoding"
+          ],
+          "metavar": "ENCODING",
+          "optionalMetavar": false,
+          "desc": "Force the specified encoding (experimental)"
+        },
+        {
+          "id": "legacy-server-connect",
+          "group": "Workarounds",
+          "short": null,
+          "long": "--legacy-server-connect",
+          "flags": [
+            "--legacy-server-connect"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Explicitly allow HTTPS connection to servers that do not support RFC 5746 secure renegotiation"
+        },
+        {
+          "id": "no-check-certificates",
+          "group": "Workarounds",
+          "short": null,
+          "long": "--no-check-certificates",
+          "flags": [
+            "--no-check-certificates"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Suppress HTTPS certificate validation"
+        },
+        {
+          "id": "prefer-insecure",
+          "group": "Workarounds",
+          "short": null,
+          "long": "--prefer-insecure",
+          "flags": [
+            "--prefer-insecure"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Use an unencrypted connection to retrieve information about the video"
+        },
+        {
+          "id": "add-headers",
+          "group": "Workarounds",
+          "short": null,
+          "long": "--add-headers",
+          "flags": [
+            "--add-headers"
+          ],
+          "metavar": "FIELD:VALUE",
+          "optionalMetavar": false,
+          "desc": "Specify a custom HTTP header and its value, separated by a colon \":\". You can use this option multiple times"
+        },
+        {
+          "id": "bidi-workaround",
+          "group": "Workarounds",
+          "short": null,
+          "long": "--bidi-workaround",
+          "flags": [
+            "--bidi-workaround"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Work around terminals that lack bidirectional text support. Requires bidiv or fribidi executable in PATH"
+        },
+        {
+          "id": "sleep-requests",
+          "group": "Workarounds",
+          "short": null,
+          "long": "--sleep-requests",
+          "flags": [
+            "--sleep-requests"
+          ],
+          "metavar": "SECONDS",
+          "optionalMetavar": false,
+          "desc": "Number of seconds to sleep between requests during data extraction"
+        },
+        {
+          "id": "sleep-interval",
+          "group": "Workarounds",
+          "short": null,
+          "long": "--sleep-interval",
+          "flags": [
+            "--sleep-interval"
+          ],
+          "metavar": "SECONDS",
+          "optionalMetavar": false,
+          "desc": "Number of seconds to sleep before each download. This is the minimum time to sleep when used along with --max-sleep-interval (Alias: --min-sleep-interval)"
+        },
+        {
+          "id": "max-sleep-interval",
+          "group": "Workarounds",
+          "short": null,
+          "long": "--max-sleep-interval",
+          "flags": [
+            "--max-sleep-interval"
+          ],
+          "metavar": "SECONDS",
+          "optionalMetavar": false,
+          "desc": "Maximum number of seconds to sleep. Can only be used along with --min-sleep-interval"
+        },
+        {
+          "id": "sleep-subtitles",
+          "group": "Workarounds",
+          "short": null,
+          "long": "--sleep-subtitles",
+          "flags": [
+            "--sleep-subtitles"
+          ],
+          "metavar": "SECONDS",
+          "optionalMetavar": false,
+          "desc": "Number of seconds to sleep before each subtitle download"
+        }
+      ]
+    },
+    {
+      "name": "Video Format Options",
+      "options": [
+        {
+          "id": "format",
+          "group": "Video Format Options",
+          "short": "-f",
+          "long": "--format",
+          "flags": [
+            "-f",
+            "--format"
+          ],
+          "metavar": "FORMAT",
+          "optionalMetavar": false,
+          "desc": "Video format code, see \"FORMAT SELECTION\" for more details"
+        },
+        {
+          "id": "format-sort",
+          "group": "Video Format Options",
+          "short": "-S",
+          "long": "--format-sort",
+          "flags": [
+            "-S",
+            "--format-sort"
+          ],
+          "metavar": "SORTORDER",
+          "optionalMetavar": false,
+          "desc": "Sort the formats by the fields given, see \"Sorting Formats\" for more details"
+        },
+        {
+          "id": "format-sort-reset",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--format-sort-reset",
+          "flags": [
+            "--format-sort-reset"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Disregard previous user specified sort order and reset to the default"
+        },
+        {
+          "id": "format-sort-force",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--format-sort-force",
+          "flags": [
+            "--format-sort-force"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Force user specified sort order to have precedence over all fields, see \"Sorting Formats\" for more details (Alias: --S-force)"
+        },
+        {
+          "id": "no-format-sort-force",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--no-format-sort-force",
+          "flags": [
+            "--no-format-sort-force"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Some fields have precedence over the user specified sort order (default)"
+        },
+        {
+          "id": "video-multistreams",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--video-multistreams",
+          "flags": [
+            "--video-multistreams"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Allow multiple video streams to be merged into a single file"
+        },
+        {
+          "id": "no-video-multistreams",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--no-video-multistreams",
+          "flags": [
+            "--no-video-multistreams"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Only one video stream is downloaded for each output file (default)"
+        },
+        {
+          "id": "audio-multistreams",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--audio-multistreams",
+          "flags": [
+            "--audio-multistreams"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Allow multiple audio streams to be merged into a single file"
+        },
+        {
+          "id": "no-audio-multistreams",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--no-audio-multistreams",
+          "flags": [
+            "--no-audio-multistreams"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Only one audio stream is downloaded for each output file (default)"
+        },
+        {
+          "id": "prefer-free-formats",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--prefer-free-formats",
+          "flags": [
+            "--prefer-free-formats"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Prefer video formats with free containers over non-free ones of the same quality. Use with \"-S ext\" to strictly prefer free containers irrespective of quality"
+        },
+        {
+          "id": "no-prefer-free-formats",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--no-prefer-free-formats",
+          "flags": [
+            "--no-prefer-free-formats"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Don't give any special preference to free containers (default)"
+        },
+        {
+          "id": "check-formats",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--check-formats",
+          "flags": [
+            "--check-formats"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Make sure formats are selected only from those that are actually downloadable"
+        },
+        {
+          "id": "check-all-formats",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--check-all-formats",
+          "flags": [
+            "--check-all-formats"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Check all formats for whether they are actually downloadable"
+        },
+        {
+          "id": "no-check-formats",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--no-check-formats",
+          "flags": [
+            "--no-check-formats"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not check that the formats are actually downloadable"
+        },
+        {
+          "id": "list-formats",
+          "group": "Video Format Options",
+          "short": "-F",
+          "long": "--list-formats",
+          "flags": [
+            "-F",
+            "--list-formats"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "List available formats of each video. Simulate unless --no-simulate is used"
+        },
+        {
+          "id": "merge-output-format",
+          "group": "Video Format Options",
+          "short": null,
+          "long": "--merge-output-format",
+          "flags": [
+            "--merge-output-format"
+          ],
+          "metavar": "FORMAT",
+          "optionalMetavar": false,
+          "desc": "Containers that may be used when merging formats, separated by \"/\", e.g. \"mp4/mkv\". Ignored if no merge is required. (currently supported: avi, flv, mkv, mov, mp4, webm)"
+        }
+      ]
+    },
+    {
+      "name": "Subtitle Options",
+      "options": [
+        {
+          "id": "write-subs",
+          "group": "Subtitle Options",
+          "short": null,
+          "long": "--write-subs",
+          "flags": [
+            "--write-subs"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write subtitle file"
+        },
+        {
+          "id": "no-write-subs",
+          "group": "Subtitle Options",
+          "short": null,
+          "long": "--no-write-subs",
+          "flags": [
+            "--no-write-subs"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not write subtitle file (default)"
+        },
+        {
+          "id": "write-auto-subs",
+          "group": "Subtitle Options",
+          "short": null,
+          "long": "--write-auto-subs",
+          "flags": [
+            "--write-auto-subs"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write automatically generated subtitle file (Alias: --write-automatic-subs)"
+        },
+        {
+          "id": "no-write-auto-subs",
+          "group": "Subtitle Options",
+          "short": null,
+          "long": "--no-write-auto-subs",
+          "flags": [
+            "--no-write-auto-subs"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not write auto-generated subtitles (default) (Alias: --no-write-automatic-subs)"
+        },
+        {
+          "id": "list-subs",
+          "group": "Subtitle Options",
+          "short": null,
+          "long": "--list-subs",
+          "flags": [
+            "--list-subs"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "List available subtitles of each video. Simulate unless --no-simulate is used"
+        },
+        {
+          "id": "sub-format",
+          "group": "Subtitle Options",
+          "short": null,
+          "long": "--sub-format",
+          "flags": [
+            "--sub-format"
+          ],
+          "metavar": "FORMAT",
+          "optionalMetavar": false,
+          "desc": "Subtitle format; accepts formats preference separated by \"/\", e.g. \"srt\" or \"ass/srt/best\""
+        },
+        {
+          "id": "sub-langs",
+          "group": "Subtitle Options",
+          "short": null,
+          "long": "--sub-langs",
+          "flags": [
+            "--sub-langs"
+          ],
+          "metavar": "LANGS",
+          "optionalMetavar": false,
+          "desc": "Languages of the subtitles to download (can be regex) or \"all\" separated by commas, e.g. --sub-langs \"en.*,ja\" (where \"en.*\" is a regex pattern that matches \"en\" followed by 0 or more of any character). You can prefix the language code with a \"-\" to exclude it from the requested languages, e.g. --sub- langs all,-live_chat. Use --list-subs for a list of available language tags"
+        }
+      ]
+    },
+    {
+      "name": "Authentication Options",
+      "options": [
+        {
+          "id": "username",
+          "group": "Authentication Options",
+          "short": "-u",
+          "long": "--username",
+          "flags": [
+            "-u",
+            "--username"
+          ],
+          "metavar": "USERNAME",
+          "optionalMetavar": false,
+          "desc": "Login with this account ID"
+        },
+        {
+          "id": "password",
+          "group": "Authentication Options",
+          "short": "-p",
+          "long": "--password",
+          "flags": [
+            "-p",
+            "--password"
+          ],
+          "metavar": "PASSWORD",
+          "optionalMetavar": false,
+          "desc": "Account password. If this option is left out, yt-dlp will ask interactively"
+        },
+        {
+          "id": "twofactor",
+          "group": "Authentication Options",
+          "short": "-2",
+          "long": "--twofactor",
+          "flags": [
+            "-2",
+            "--twofactor"
+          ],
+          "metavar": "TWOFACTOR",
+          "optionalMetavar": false,
+          "desc": "Two-factor authentication code"
+        },
+        {
+          "id": "netrc",
+          "group": "Authentication Options",
+          "short": "-n",
+          "long": "--netrc",
+          "flags": [
+            "-n",
+            "--netrc"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Use .netrc authentication data"
+        },
+        {
+          "id": "netrc-location",
+          "group": "Authentication Options",
+          "short": null,
+          "long": "--netrc-location",
+          "flags": [
+            "--netrc-location"
+          ],
+          "metavar": "PATH",
+          "optionalMetavar": false,
+          "desc": "Location of .netrc authentication data; either the path or its containing directory. Defaults to ~/.netrc"
+        },
+        {
+          "id": "netrc-cmd",
+          "group": "Authentication Options",
+          "short": null,
+          "long": "--netrc-cmd",
+          "flags": [
+            "--netrc-cmd"
+          ],
+          "metavar": "NETRC_CMD",
+          "optionalMetavar": false,
+          "desc": "Command to execute to get the credentials for an extractor."
+        },
+        {
+          "id": "video-password",
+          "group": "Authentication Options",
+          "short": null,
+          "long": "--video-password",
+          "flags": [
+            "--video-password"
+          ],
+          "metavar": "PASSWORD",
+          "optionalMetavar": false,
+          "desc": "Video-specific password"
+        },
+        {
+          "id": "ap-mso",
+          "group": "Authentication Options",
+          "short": null,
+          "long": "--ap-mso",
+          "flags": [
+            "--ap-mso"
+          ],
+          "metavar": "MSO",
+          "optionalMetavar": false,
+          "desc": "Adobe Pass multiple-system operator (TV provider) identifier, use --ap-list-mso for a list of available MSOs"
+        },
+        {
+          "id": "ap-username",
+          "group": "Authentication Options",
+          "short": null,
+          "long": "--ap-username",
+          "flags": [
+            "--ap-username"
+          ],
+          "metavar": "USERNAME",
+          "optionalMetavar": false,
+          "desc": "Multiple-system operator account login"
+        },
+        {
+          "id": "ap-password",
+          "group": "Authentication Options",
+          "short": null,
+          "long": "--ap-password",
+          "flags": [
+            "--ap-password"
+          ],
+          "metavar": "PASSWORD",
+          "optionalMetavar": false,
+          "desc": "Multiple-system operator account password. If this option is left out, yt-dlp will ask interactively"
+        },
+        {
+          "id": "ap-list-mso",
+          "group": "Authentication Options",
+          "short": null,
+          "long": "--ap-list-mso",
+          "flags": [
+            "--ap-list-mso"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "List all supported multiple-system operators"
+        },
+        {
+          "id": "client-certificate",
+          "group": "Authentication Options",
+          "short": null,
+          "long": "--client-certificate",
+          "flags": [
+            "--client-certificate"
+          ],
+          "metavar": "CERTFILE",
+          "optionalMetavar": false,
+          "desc": "Path to client certificate file in PEM format. May include the private key Path to private key file for client certificate Password for client certificate private key, if encrypted. If not provided, and the key is encrypted, yt-dlp will ask interactively"
+        }
+      ]
+    },
+    {
+      "name": "Post-Processing Options",
+      "options": [
+        {
+          "id": "extract-audio",
+          "group": "Post-Processing Options",
+          "short": "-x",
+          "long": "--extract-audio",
+          "flags": [
+            "-x",
+            "--extract-audio"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Convert video files to audio-only files (requires ffmpeg and ffprobe)"
+        },
+        {
+          "id": "audio-format",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--audio-format",
+          "flags": [
+            "--audio-format"
+          ],
+          "metavar": "FORMAT",
+          "optionalMetavar": false,
+          "desc": "Format to convert the audio to when -x is used. (currently supported: best (default), aac, alac, flac, m4a, mp3, opus, vorbis, wav). You can specify multiple rules using similar syntax as --remux-video"
+        },
+        {
+          "id": "audio-quality",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--audio-quality",
+          "flags": [
+            "--audio-quality"
+          ],
+          "metavar": "QUALITY",
+          "optionalMetavar": false,
+          "desc": "Specify ffmpeg audio quality to use when converting the audio with -x. Insert a value between 0 (best) and 10 (worst) for VBR or a specific bitrate like 128K (default 5)"
+        },
+        {
+          "id": "remux-video",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--remux-video",
+          "flags": [
+            "--remux-video"
+          ],
+          "metavar": "FORMAT",
+          "optionalMetavar": false,
+          "desc": "Remux the video into another container if necessary (currently supported: avi, flv, gif, mkv, mov, mp4, webm, aac, aiff, alac, flac, m4a, mka, mp3, ogg, opus, vorbis, wav). If the target container does not support the video/audio codec, remuxing will fail. You can specify multiple rules; e.g. \"aac>m4a/mov>mp4/mkv\" will remux aac to m4a, mov to mp4 and anything else to mkv"
+        },
+        {
+          "id": "recode-video",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--recode-video",
+          "flags": [
+            "--recode-video"
+          ],
+          "metavar": "FORMAT",
+          "optionalMetavar": false,
+          "desc": "Re-encode the video into another format if necessary. The syntax and supported formats are the same as --remux-video"
+        },
+        {
+          "id": "postprocessor-args",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--postprocessor-args",
+          "flags": [
+            "--postprocessor-args"
+          ],
+          "metavar": "NAME:ARGS",
+          "optionalMetavar": false,
+          "desc": "Give these arguments to the postprocessors. Specify the postprocessor/executable name and the arguments separated by a colon \":\" to give the argument to the specified postprocessor/executable. Supported PP are: Merger, ModifyChapters, SplitChapters, ExtractAudio, VideoRemuxer, VideoConvertor, Metadata, EmbedSubtitle, EmbedThumbnail, SubtitlesConvertor, ThumbnailsConvertor, FixupStretched, FixupM4a, FixupM3u8, FixupTimestamp and FixupDuration. The supported executables are: AtomicParsley, FFmpeg and FFprobe. You can also specify \"PP+EXE:ARGS\" to give the arguments to the specified executable only when being used by the specified postprocessor. Additionally, for ffmpeg/ffprobe, \"_i\"/\"_o\" can be appended to the prefix optionally followed by a number to pass the argument before the specified input/output file, e.g. --ppa \"Merger+ffmpeg_i1:-v quiet\". You can use this option multiple times to give different arguments to different postprocessors. (Alias: --ppa)"
+        },
+        {
+          "id": "keep-video",
+          "group": "Post-Processing Options",
+          "short": "-k",
+          "long": "--keep-video",
+          "flags": [
+            "-k",
+            "--keep-video"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Keep the intermediate video file on disk after post-processing"
+        },
+        {
+          "id": "no-keep-video",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--no-keep-video",
+          "flags": [
+            "--no-keep-video"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Delete the intermediate video file after post-processing (default)"
+        },
+        {
+          "id": "post-overwrites",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--post-overwrites",
+          "flags": [
+            "--post-overwrites"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Overwrite post-processed files (default)"
+        },
+        {
+          "id": "no-post-overwrites",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--no-post-overwrites",
+          "flags": [
+            "--no-post-overwrites"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not overwrite post-processed files"
+        },
+        {
+          "id": "embed-subs",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--embed-subs",
+          "flags": [
+            "--embed-subs"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Embed subtitles in the video (only for mp4, webm and mkv videos)"
+        },
+        {
+          "id": "no-embed-subs",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--no-embed-subs",
+          "flags": [
+            "--no-embed-subs"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not embed subtitles (default)"
+        },
+        {
+          "id": "embed-thumbnail",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--embed-thumbnail",
+          "flags": [
+            "--embed-thumbnail"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Embed thumbnail in the video as cover art"
+        },
+        {
+          "id": "no-embed-thumbnail",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--no-embed-thumbnail",
+          "flags": [
+            "--no-embed-thumbnail"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not embed thumbnail (default)"
+        },
+        {
+          "id": "embed-metadata",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--embed-metadata",
+          "flags": [
+            "--embed-metadata"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Embed metadata to the video file. Also embeds chapters/infojson if present unless --no-embed-chapters/--no-embed-info-json are used (Alias: --add-metadata)"
+        },
+        {
+          "id": "no-embed-metadata",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--no-embed-metadata",
+          "flags": [
+            "--no-embed-metadata"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not add metadata to file (default) (Alias: --no-add-metadata)"
+        },
+        {
+          "id": "embed-chapters",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--embed-chapters",
+          "flags": [
+            "--embed-chapters"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Add chapter markers to the video file (Alias: --add-chapters)"
+        },
+        {
+          "id": "no-embed-chapters",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--no-embed-chapters",
+          "flags": [
+            "--no-embed-chapters"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not add chapter markers (default) (Alias: --no-add-chapters)"
+        },
+        {
+          "id": "embed-info-json",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--embed-info-json",
+          "flags": [
+            "--embed-info-json"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Embed the infojson as an attachment to mkv/mka video files"
+        },
+        {
+          "id": "no-embed-info-json",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--no-embed-info-json",
+          "flags": [
+            "--no-embed-info-json"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not embed the infojson as an attachment to the video file Parse additional metadata like title/artist from other fields; see \"MODIFYING METADATA\" for details. Supported values of \"WHEN\" are the same as that of --use-postprocessor (default: pre_process) Replace text in a metadata field using the given regex. This option can be used multiple times. Supported values of \"WHEN\" are the same as that of --use-postprocessor (default: pre_process)"
+        },
+        {
+          "id": "xattrs",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--xattrs",
+          "flags": [
+            "--xattrs"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Write metadata to the video file's xattrs (using Dublin Core and XDG standards)"
+        },
+        {
+          "id": "concat-playlist",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--concat-playlist",
+          "flags": [
+            "--concat-playlist"
+          ],
+          "metavar": "POLICY",
+          "optionalMetavar": false,
+          "desc": "Concatenate videos in a playlist. One of \"never\", \"always\", or \"multi_video\" (default; only when the videos form a single show). All the video files must have the same codecs and number of streams to be concatenable. The \"pl_video:\" prefix can be used with \"--paths\" and \"--output\" to set the output filename for the concatenated files. See \"OUTPUT TEMPLATE\" for details"
+        },
+        {
+          "id": "fixup",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--fixup",
+          "flags": [
+            "--fixup"
+          ],
+          "metavar": "POLICY",
+          "optionalMetavar": false,
+          "desc": "Automatically correct known faults of the file. One of never (do nothing), warn (only emit a warning), detect_or_warn (the default; fix the file if we can, warn otherwise), force (try fixing even if the file already exists)"
+        },
+        {
+          "id": "ffmpeg-location",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--ffmpeg-location",
+          "flags": [
+            "--ffmpeg-location"
+          ],
+          "metavar": "PATH",
+          "optionalMetavar": false,
+          "desc": "Location of the ffmpeg binary; either the path to the binary or its containing directory"
+        },
+        {
+          "id": "exec",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--exec",
+          "flags": [
+            "--exec"
+          ],
+          "metavar": "[WHEN:]CMD",
+          "optionalMetavar": true,
+          "desc": "Execute a command, optionally prefixed with when to execute it, separated by a \":\". Supported values of \"WHEN\" are the same as that of --use-postprocessor (default: after_move). The same syntax as the output template can be used to pass any field as arguments to the command; however, for security reasons the only allowed conversions are: \"i\"/\"d\" (signed integer decimal), \"f\" (floating-point decimal) and \"q\" (shell-quoted). If no fields are passed, %(filepath,_filename|)q is appended to the end of the command. This option can be used multiple times"
+        },
+        {
+          "id": "no-exec",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--no-exec",
+          "flags": [
+            "--no-exec"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Remove any previously defined --exec"
+        },
+        {
+          "id": "convert-subs",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--convert-subs",
+          "flags": [
+            "--convert-subs"
+          ],
+          "metavar": "FORMAT",
+          "optionalMetavar": false,
+          "desc": "Convert the subtitles to another format (currently supported: ass, lrc, srt, vtt). Use \"--convert-subs none\" to disable conversion (default) (Alias: --convert- subtitles)"
+        },
+        {
+          "id": "convert-thumbnails",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--convert-thumbnails",
+          "flags": [
+            "--convert-thumbnails"
+          ],
+          "metavar": "FORMAT",
+          "optionalMetavar": false,
+          "desc": "Convert the thumbnails to another format (currently supported: jpg, png, webp). You can specify multiple rules using similar syntax as \"--remux-video\". Use \"--convert- thumbnails none\" to disable conversion (default)"
+        },
+        {
+          "id": "split-chapters",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--split-chapters",
+          "flags": [
+            "--split-chapters"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Split video into multiple files based on internal chapters. The \"chapter:\" prefix can be used with \"--paths\" and \"--output\" to set the output filename for the split files. See \"OUTPUT TEMPLATE\" for details"
+        },
+        {
+          "id": "no-split-chapters",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--no-split-chapters",
+          "flags": [
+            "--no-split-chapters"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not split video based on chapters (default)"
+        },
+        {
+          "id": "remove-chapters",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--remove-chapters",
+          "flags": [
+            "--remove-chapters"
+          ],
+          "metavar": "REGEX",
+          "optionalMetavar": false,
+          "desc": "Remove chapters whose title matches the given regular expression. The syntax is the same as --download-sections. This option can be used multiple times"
+        },
+        {
+          "id": "no-remove-chapters",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--no-remove-chapters",
+          "flags": [
+            "--no-remove-chapters"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not remove any chapters from the file (default)"
+        },
+        {
+          "id": "force-keyframes-at-cuts",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--force-keyframes-at-cuts",
+          "flags": [
+            "--force-keyframes-at-cuts"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Force keyframes at cuts when downloading/splitting/removing sections. This is slow due to needing a re-encode, but the resulting video may have fewer artifacts around the cuts"
+        },
+        {
+          "id": "no-force-keyframes-at-cuts",
+          "group": "Post-Processing Options",
+          "short": null,
+          "long": "--no-force-keyframes-at-cuts",
+          "flags": [
+            "--no-force-keyframes-at-cuts"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not force keyframes around the chapters when cutting/splitting (default) The (case-sensitive) name of plugin postprocessors to be enabled, and (optionally) arguments to be passed to it, separated by a colon \":\". ARGS are a semicolon \";\" delimited list of NAME=VALUE. The \"when\" argument determines when the postprocessor is invoked. It can be one of \"pre_process\" (after video extraction), \"after_filter\" (after video passes filter), \"video\" (after --format; before --print/--output), \"before_dl\" (before each video download), \"post_process\" (after each video download; default), \"after_move\" (after moving the video file to its final location), \"after_video\" (after downloading and processing all formats of a video), or \"playlist\" (at end of playlist). This option can be used multiple times to add different postprocessors"
+        }
+      ]
+    },
+    {
+      "name": "SponsorBlock Options",
+      "options": [
+        {
+          "id": "sponsorblock-mark",
+          "group": "SponsorBlock Options",
+          "short": null,
+          "long": "--sponsorblock-mark",
+          "flags": [
+            "--sponsorblock-mark"
+          ],
+          "metavar": "CATS",
+          "optionalMetavar": false,
+          "desc": "SponsorBlock categories to create chapters for, separated by commas. Available categories are sponsor, intro, outro, selfpromo, preview, filler, interaction, music_offtopic, hook, poi_highlight, chapter, all and default (=all). You can prefix the category with a \"-\" to exclude it. See [1] for descriptions of the categories. E.g. --sponsorblock-mark all,-preview [1] https://wiki.sponsor.ajay.a pp/w/Segment_Categories"
+        },
+        {
+          "id": "sponsorblock-remove",
+          "group": "SponsorBlock Options",
+          "short": null,
+          "long": "--sponsorblock-remove",
+          "flags": [
+            "--sponsorblock-remove"
+          ],
+          "metavar": "CATS",
+          "optionalMetavar": false,
+          "desc": "SponsorBlock categories to be removed from the video file, separated by commas. If a category is present in both mark and remove, remove takes precedence. The syntax and available categories are the same as for --sponsorblock-mark except that \"default\" refers to \"all,-filler\" and poi_highlight, chapter are not available An output template for the title of the SponsorBlock chapters created by --sponsorblock-mark. The only available fields are start_time, end_time, category, categories, name, category_names. Defaults to \"[SponsorBlock]: %(category_names)l\""
+        },
+        {
+          "id": "no-sponsorblock",
+          "group": "SponsorBlock Options",
+          "short": null,
+          "long": "--no-sponsorblock",
+          "flags": [
+            "--no-sponsorblock"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Disable both --sponsorblock-mark and --sponsorblock-remove"
+        },
+        {
+          "id": "sponsorblock-api",
+          "group": "SponsorBlock Options",
+          "short": null,
+          "long": "--sponsorblock-api",
+          "flags": [
+            "--sponsorblock-api"
+          ],
+          "metavar": "URL",
+          "optionalMetavar": false,
+          "desc": "SponsorBlock API location, defaults to https://sponsor.ajay.app"
+        }
+      ]
+    },
+    {
+      "name": "Extractor Options",
+      "options": [
+        {
+          "id": "extractor-retries",
+          "group": "Extractor Options",
+          "short": null,
+          "long": "--extractor-retries",
+          "flags": [
+            "--extractor-retries"
+          ],
+          "metavar": "RETRIES",
+          "optionalMetavar": false,
+          "desc": "Number of retries for known extractor errors (default is 3), or \"infinite\""
+        },
+        {
+          "id": "allow-dynamic-mpd",
+          "group": "Extractor Options",
+          "short": null,
+          "long": "--allow-dynamic-mpd",
+          "flags": [
+            "--allow-dynamic-mpd"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Process dynamic DASH manifests (default) (Alias: --no-ignore-dynamic-mpd)"
+        },
+        {
+          "id": "ignore-dynamic-mpd",
+          "group": "Extractor Options",
+          "short": null,
+          "long": "--ignore-dynamic-mpd",
+          "flags": [
+            "--ignore-dynamic-mpd"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not process dynamic DASH manifests (Alias: --no-allow-dynamic-mpd)"
+        },
+        {
+          "id": "hls-split-discontinuity",
+          "group": "Extractor Options",
+          "short": null,
+          "long": "--hls-split-discontinuity",
+          "flags": [
+            "--hls-split-discontinuity"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Split HLS playlists to different formats at discontinuities such as ad breaks"
+        },
+        {
+          "id": "no-hls-split-discontinuity",
+          "group": "Extractor Options",
+          "short": null,
+          "long": "--no-hls-split-discontinuity",
+          "flags": [
+            "--no-hls-split-discontinuity"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "Do not split HLS playlists into different formats at discontinuities such as ad breaks (default)"
+        },
+        {
+          "id": "extractor-args",
+          "group": "Extractor Options",
+          "short": null,
+          "long": "--extractor-args",
+          "flags": [
+            "--extractor-args"
+          ],
+          "metavar": "IE_KEY:ARGS",
+          "optionalMetavar": false,
+          "desc": "Pass ARGS arguments to the IE_KEY extractor. See \"EXTRACTOR ARGUMENTS\" for details. You can use this option multiple times to give arguments for different extractors"
+        }
+      ]
+    },
+    {
+      "name": "Preset Aliases",
+      "options": [
+        {
+          "id": "t",
+          "group": "Preset Aliases",
+          "short": "-t",
+          "long": null,
+          "flags": [
+            "-t"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "-f 'ba[acodec^=mp3]/ba/b' -x --audio-format mp3"
+        },
+        {
+          "id": "t",
+          "group": "Preset Aliases",
+          "short": "-t",
+          "long": null,
+          "flags": [
+            "-t"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "-f 'ba[acodec^=aac]/ba[acodec^=mp4a.40.]/ba/b' -x --audio-format aac"
+        },
+        {
+          "id": "t",
+          "group": "Preset Aliases",
+          "short": "-t",
+          "long": null,
+          "flags": [
+            "-t"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "--merge-output-format mp4 --remux-video mp4 -S vcodec:h264,lang,quality,res,fps,hdr:12,a codec:aac"
+        },
+        {
+          "id": "t",
+          "group": "Preset Aliases",
+          "short": "-t",
+          "long": null,
+          "flags": [
+            "-t"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "--merge-output-format mkv --remux-video mkv"
+        },
+        {
+          "id": "t",
+          "group": "Preset Aliases",
+          "short": "-t",
+          "long": null,
+          "flags": [
+            "-t"
+          ],
+          "metavar": null,
+          "optionalMetavar": false,
+          "desc": "--sleep-subtitles 5 --sleep-requests 0.75 --sleep-interval 10 --max-sleep-interval 20"
+        }
+      ]
+    }
+  ]
+}
